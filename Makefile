@@ -9,5 +9,10 @@ run:
 test:
 	@./node_modules/.bin/mocha
 
+start:
+	docker run -d --restart=always --name sign sign
 
-.PHONY: all build run test
+stop:
+	@docker rm -vf sign ||:
+
+.PHONY: all build run test start stop
