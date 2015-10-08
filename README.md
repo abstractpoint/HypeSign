@@ -8,3 +8,5 @@ The Dockerfile configures the application to run on a Rpi, so it won't work
 on non ARM architecture.
 
 IPs are also hardcoded, sorry
+
+Create a src/credentials.json with your Twitter creds
