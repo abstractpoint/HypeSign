@@ -25,7 +25,7 @@ function sendTime() {
 }
 
 
-setTimeout(function(){
+setInterval(function(){
 	sendTime();
 }, 1000);
 
