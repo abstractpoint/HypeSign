@@ -12,7 +12,7 @@ var exec = require('child_process').exec;
 
 function sendTime() {
 
-	exec('date', function(error, stdout, stderr){
+	exec('date +\"%H:%M %a %b %d (%z)\"', function(error, stdout, stderr){
 	        console.log(stdout);
 	        string = stdout;
 
@@ -27,7 +27,7 @@ function sendTime() {
 
 setInterval(function(){
 	sendTime();
-}, 1000);
+}, 60000);
 
 // t.on('tweet', function (tweet) {
 //     console.log('tweet recieved', tweet);
